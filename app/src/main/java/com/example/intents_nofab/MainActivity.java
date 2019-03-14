@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
@@ -23,9 +24,13 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, SecondActivity.class);
-                intent.putExtra("test", "ten tekst pochodzi z innego activity");
-                startActivity(intent);
+                startActivityForResult(intent, 1);
+
             }
         });
     }
-}
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(requestCode==1 && resultCode==RESULT_OK){
+            Toast.makeText(this,data.getStringExtra("someData"),Toast.LENGTH_SHORT).show();
+}}}

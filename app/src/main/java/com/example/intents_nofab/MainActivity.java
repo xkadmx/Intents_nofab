@@ -2,12 +2,13 @@ package com.example.intents_nofab;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
     Button buttonNext ;
 
@@ -22,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                intent.putExtra("test", "ten tekst pochodzi z innego activity");
+                startActivity(intent);
             }
         });
     }

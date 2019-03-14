@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Intents_nofab</string>
     <string name="przejdz_do_kolejnej_czynnosci">Przejdż do kolejnej czynności</string>
+    <string name="powroc_natychmiast">Powroc natychmiast!</string>
 </resources>

@@ -28,6 +28,7 @@ public class SecondActivity extends Activity {
                 Intent intent = new Intent();
                 intent.putExtra("someData", "Data z rezultatu");
                 setResult(RESULT_OK, intent);
+                finish();
 
 
             }
